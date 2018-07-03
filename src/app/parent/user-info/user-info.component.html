@@ -1,0 +1,43 @@
+<div class="container">
+  <form #editForm="ngForm" (ngSubmit)="saveEmployee()">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Edit User Information</h3>
+      </div>
+      <div class="panel-body">
+        <div class="form-group" [class.has-error]="name.invalid && name.touched" [class.has-success]="name.valid">
+
+          <label for="name" class="control-label">Username</label>
+          <input #name="ngModel" required id="name" [(ngModel)]="username" name="name" type="text" class="form-control" placeholder="John">
+          <span *ngIf="name.invalid && name.touched" class="help-block">
+            Name is required
+          </span>
+        </div>
+
+        <div class="form-group">
+
+          <label for="api" class="control-label">API key</label>
+          <input #api="ngModel" id="api" [(ngModel)]="apiKey" name="api" type="text" class="form-control" placeholder="gdfghdf4z24dasd3">
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="setCache" class="control-label">Set Cache invalidation time</label>
+          <input #setCache="ngModel" id="setCache" [(ngModel)]="cacheTime" name="setCache" type="text" class="form-control">
+
+        </div>
+
+
+      </div>
+
+      <div class="panel-footer">
+        <button type="submit" class="btn btn-primary" [disabled]="editForm.invalid">Confirm Changes</button>
+        <button (click)=cancelEdit() class="btn btn-danger pull-right">Cancel Changes</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+<h4>Number of server calls in the past 10 minutes with the specified API ID:</h4>
+<label></label>

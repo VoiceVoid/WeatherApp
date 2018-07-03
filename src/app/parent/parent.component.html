@@ -1,0 +1,20 @@
+<div class="container">
+  <nav class="navbar navbar-default">
+      <ul class="nav navbar-nav">
+          <li>
+              <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+          </li>
+          <li>
+              <a routerLink="/forecast">Forecast</a>
+          </li>
+          <li>
+            <a routerLink="/userinfo">User Information</a>
+        </li>
+          <!-- <li>
+              <a [routerLink]="['/employees', 2]">Get Employee With ID 2</a>
+          </li> -->
+      </ul>
+      <button class="btn btn-info pull-right btnlogin" (click)="logout()">Logout</button>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

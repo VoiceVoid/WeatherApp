@@ -1,0 +1,37 @@
+<form >
+  <div class="form-group"><label >City</label>
+    <input type="text" name="city" class="form-control" [(ngModel)]="city">
+    
+    <footer class="text-muted">Example: London</footer>
+    <button class="btn btn-primary" (click)="findCity()">Find City</button>
+  </div>
+  
+</form>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>City</th>
+        <th>Weather icon</th>
+        <th>Temperature</th>
+        <th>Humidity</th>
+        <th>Wind speed</th>
+        <th>Wind direction</th>
+      </tr>
+    </thead>
+   
+    <tbody *ngIf="weatherData">
+      <tr >
+        <td>{{weatherData.name}}</td>
+        <td ><img src={{iconPath}}> </td>
+        <td *ngIf="celsius">{{weatherData.main.temp | number : '1.1-1'}} °C</td>
+        <td *ngIf="!celsius">{{weatherData.main.temp  * 1.8 + 32 | number : '1.1-1'}} °F</td>
+        <td >{{weatherData.main.humidity}}%</td>
+        <td >{{weatherData.wind.speed}} m/s</td>
+        <td >{{weatherData.wind.deg}}°</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button (click)="toggleTemp()" class="btn btn-info">Switch From F° to C°</button>

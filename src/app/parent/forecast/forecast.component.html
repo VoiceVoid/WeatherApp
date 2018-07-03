@@ -1,0 +1,27 @@
+
+<h3>Displaying 5-day weather forecast for <b>{{city}}</b></h3>
+<div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Temperatures</th>
+        <th>Wind directions</th>
+        <th>weather icon</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let day of week">
+      <tr>
+        <td>{{day.date | date}}</td>
+        <td>{{day.temperature}} °C</td>
+        <td>{{day.wind | number : '1.1-1'}}°</td>
+        <td><img src="http://openweathermap.org/img/w/{{day.icon}}.png"></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<hr>
+<div>
+  <canvas id="canvas">{{chart}}}</canvas>
+</div>

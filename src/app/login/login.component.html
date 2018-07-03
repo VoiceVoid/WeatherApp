@@ -1,0 +1,39 @@
+<div class="container">
+<form #weatherForm="ngForm"  (ngSubmit)="weatherEmployee()">
+
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Weather App</h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group" [class.has-error]="name.invalid && name.touched" [class.has-success]="name.valid">
+
+        <label for="name" class="control-label">Username</label>
+        <input #name="ngModel" required id="name" [(ngModel)]="username" name="name" type="text" class="form-control" placeholder="John">
+        <span *ngIf="name.invalid && name.touched" class="help-block">
+          Name is required
+        </span>
+      </div>
+
+      <div class="form-group">
+
+        <label for="api" class="control-label">API key</label>
+        <input #api="ngModel"  id="api" [(ngModel)]="apiKey" name="api" type="text" class="form-control" placeholder="gdfghdf4z24dasd3">
+       
+      </div>
+
+      
+      </div>
+
+
+
+  </div>
+
+  <div class="panel-footer">
+    <button type="submit" class="btn btn-primary" [disabled]="weatherForm.invalid">Submit</button>
+  </div>
+
+
+
+</form>
+</div>
