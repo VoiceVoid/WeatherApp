@@ -10,9 +10,11 @@ import { DashboardComponent } from './parent/dashboard/dashboard.component';
 import { ForecastComponent } from './parent/forecast/forecast.component';
 import { UserInfoComponent } from './parent/user-info/user-info.component';
 import { WeatherService } from './shared/services/weather.service';
+
 import 'rxjs/add/operator/publishReplay';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/take';
+
 import { ParentComponent } from './parent/parent.component';
 import { AuthGuard } from './auth/auth.guard';
 @NgModule({
