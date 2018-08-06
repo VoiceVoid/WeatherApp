@@ -21,20 +21,19 @@ Elements:
 - Button to switch from F° to C°
 
 Forecast:
-Displays a weather forecast for 5 days for the location selected in the dashboard screen.
-Elements:
-● Weather conditions table with temperatures, wind direction and weather icons.
-● A chart, that displays the 3 hour forecast of temperatures.
+- Displays a weather forecast for 5 days for the location selected in the dashboard screen.
+- Weather conditions table with temperatures, wind direction and weather icons.
+- A chart, that displays the 3 hour forecast of temperatures.
 
-User information
-Screen where user is able to edit his information and change the API access key
+User information:
+- Screen where user is able to edit his information and change the API access key
 Elements:
-● User name (input)
-● API ID (input)
-● Number of server calls in the past 10min with the specified API ID. (label)
-● Clear API cache button
-● Set Cache invalidation time
-● Confirm and Cancel button
+- User name (input)
+- API ID (input)
+- Number of server calls in the past 10min with the specified API ID. (label)
+- Clear API cache button
+- Set Cache invalidation time
+- Confirm and Cancel button
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
