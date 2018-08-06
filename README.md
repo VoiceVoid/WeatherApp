@@ -3,7 +3,9 @@ Features:
 
 - Login Screen
 The login screen that accepts the following parameters:
+
 ● Name ­ Variable name that needs to be stored
+
 ● API ID ­ OpenWeatherApi ID that is used on all the API requests
 
 Dashboard
