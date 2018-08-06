@@ -1,26 +1,24 @@
 # Weather prediction App
 Features:
 
-- Login Screen
+Login Screen:
 The login screen that accepts the following parameters:
+- Name ­ Variable name that needs to be stored
+ -API ID ­ OpenWeatherApi ID that is used on all the API requests
 
-● Name ­ Variable name that needs to be stored
-
-● API ID ­ OpenWeatherApi ID that is used on all the API requests
-
-Dashboard
-Contains an input element, where user can type a location (default user geolocation)
-Displays current weather information for the selected location
+Dashboard:
+- Contains an input element, where user can type a location (default user geolocation)
+- Displays current weather information for the selected location
 
 Elements:
-● Current location Input (supports geolocation)
-● Weather table with following fields
-○ Weather icon
-○ Temperature
-○ Humidity
-○ Wind speed
-○ Wind direction
-● Button to switch from F° to C°
+- Current location Input (supports geolocation)
+- Weather table with following fields
+- Weather icon
+- Temperature
+- Humidity
+- Wind speed
+- Wind direction
+- Button to switch from F° to C°
 
 Forecast:
 Displays a weather forecast for 5 days for the location selected in the dashboard screen.
